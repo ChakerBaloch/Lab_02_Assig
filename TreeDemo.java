@@ -61,13 +61,27 @@ class BinarySearchTree{
 
    
    
-   /*
-   in-order traversal
+   /**
+   * Performs an in-order traversal of a binary tree.
+   * In in-order traversal, the left subtree is visited first,
+   * then the root node, and finally the right subtree.
+   * This method prints the data of each node during the traversal.
+   * This traversal method is commonly used in binary search trees
+   * to retrieve elements in their sorted order.
+   *
+   * @param root The root node of the binary tree to be traversed.
    */
    public void inOrderTraversal(Node root){
-      //implement me
+      if (root == null) {
+          return;
+      }
+  
+      inOrderTraversal(root.left);
+  
+      System.out.print(root.value + " ");
+  
+      inOrderTraversal(root.right);
    }
-   
    
    
    /*
