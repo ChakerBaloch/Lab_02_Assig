@@ -146,14 +146,20 @@ class BinarySearchTree{
   
   
   
-   /*
-   a method to find the node in the tree
-   with a largest key
+   /**
+   * a method to find the node in the tree
+   * with a largest key
+   * 
+   * @param root The root node for binary search tree. 
    */
    public int getMax(Node root){
-	  //implement me
-     return 0;
+      Node head = root;
+      while (head.right != null){
+         head = head.right;
+      }
+      return head.value;
    }
+
    
    
    
