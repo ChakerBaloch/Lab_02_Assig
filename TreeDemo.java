@@ -37,12 +37,27 @@ class BinarySearchTree{
    
    
    
-   /*
-   pre-order traversal
-   */
+   /**
+    * Performs a pre-order traversal of a binary tree.
+    * In pre-order traversal, the root node is visited first,
+    * followed by recursive visits to the left and right subtrees.
+    * This method prints the data of each node during the traversal.
+    *
+    * @param root The root node of the binary tree to be traversed.
+    */
+
    public void preOrderTraversal(Node root){
-      //implement me
-   }
+    if (root == null) {
+      return;
+  }
+
+  System.out.print(root.value + " ");
+
+  preOrderTraversal(root.left);
+
+  preOrderTraversal(root.right);
+
+}
 
    
    
