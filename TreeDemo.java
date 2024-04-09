@@ -84,11 +84,22 @@ class BinarySearchTree{
    }
    
    
-   /*
-   post-order traversal
+   /**
+   * Performs a post-order traversal of a binary tree rooted at the given node.
+   * Post-order traversal visits the left subtree, then the right subtree, and finally the root node.
+   * This method prints the values of the nodes in post-order traversal.
+   *
+   * @param root The root node of the binary tree to traverse.
    */
    public void postOrderTraversal(Node root){
-      //implement me
+      if (root == null) {
+         return;
+     }
+     postOrderTraversal(root.left);
+     
+     postOrderTraversal(root.right);
+
+     System.out.println(root.value + " ");
    }
    
    
